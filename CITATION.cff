@@ -1,0 +1,14 @@
+
+## 3.6 `CITATION.cff` (facultatif mais pro)
+```yaml
+cff-version: 1.2.0
+title: "cip13-dose-tools"
+message: "If you use this tool, please cite it as below."
+type: software
+authors:
+  - family-names: VotreNom
+    given-names: Prenom
+version: "0.1.0"
+date-released: "2025-08-29"
+repository-code: "https://github.com/votrecompte/cip13-dose-tools"
+license: Apache-2.0

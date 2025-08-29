@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cipdose"
+version = "0.1.0"
+description = "Normalize French CIP13 presentations from CIP_UCD.csv into consistent dosage features."
+readme = "README.md"
+authors = [{name="Ugo Meli", email="ugo.meli@inserm.fr"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.2",
+  "pyarrow>=16"
+]
+
+[project.urls]
+Homepage = "https://github.com/votrecompte/cip13-dose-tools"
+Issues = "https://github.com/votrecompte/cip13-dose-tools/issues"
+
+[project.scripts]
+cipdose = "cipdose.cli:main"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E","F","I","UP","B","SIM","C4"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
